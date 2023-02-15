@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
 import { toggleCompletedTodo, removeTodo } from "../features/todo/todoSlice";
+import { FaCheckDouble, FaTrashAlt } from "react-icons/fa";
 
 const TodoItem = ({ todo }) => {
   const dispatch = useDispatch();
@@ -12,14 +13,23 @@ const TodoItem = ({ todo }) => {
     dispatch(removeTodo(id));
   };
   return (
-    <div className="">
-      <button onClick={() => toggleTodoHandler(todo.id)} className="">
-        Complete
-      </button>
-      <div style={{ color: todo.completed ? "green" : "red" }}>{todo.text}</div>
-      <button onClick={() => removeTodoHandler(todo.id)} className="">
-        Delete
-      </button>
+    <div className="todo">
+      <div
+        className="todo_text"
+        style={{ color: todo.completed ? "rgb(48, 255, 151)" : "white" }}
+      >
+        {todo.text}
+      </div>
+      <div className="todo_icons">
+        <FaCheckDouble
+          onClick={() => toggleTodoHandler(todo.id)}
+          className="button_icon button_icon_todo"
+        />
+        <FaTrashAlt
+          onClick={() => removeTodoHandler(todo.id)}
+          className="button_icon button_icon_todo"
+        />
+      </div>
     </div>
   );
 };

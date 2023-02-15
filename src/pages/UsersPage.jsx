@@ -8,13 +8,13 @@ const Users = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className="flex flex-col">
-      <h1>Redux Toolkit State Change</h1>
-      <div>
+    <div>
+      <h1 className="header">Redux Toolkit State Change</h1>
+      <div className="names_inputs">
         <input
           type="text"
           placeholder="First Name"
-          className=""
+          className="input"
           onChange={(e) => {
             dispatch(setFirstName(e.target.value));
           }}
@@ -22,20 +22,20 @@ const Users = () => {
         <input
           type="text"
           placeholder="Last Name"
-          className=""
+          className="input"
           onChange={(e) => {
             dispatch(setLastName(e.target.value));
           }}
         />
       </div>
 
-      <div className="">
-        <div>
+      <div className="names">
+        <div className="names_box">
           <p>First Name:</p>
           <FirstName />
         </div>
 
-        <div>
+        <div className="names_box">
           <p>Last Name:</p>
           <LastName />
         </div>

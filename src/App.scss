@@ -1,7 +1,129 @@
-/* #25EF9D */
+/* Colors: */
+$main-color: #bebebe;
+$secondary-color: #25e8ef;
+
+body {
+  background: rgb(43, 43, 43);
+  color: white;
+  width: 100vw;
+  height: 100vh;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
+  padding: 1.5rem;
+  margin-top: 1rem;
+}
+
+.header {
+  font-size: 2.5rem;
+  margin: 3rem;
+  text-align: center;
+}
+
+.input {
+  font-size: 1rem;
+  padding: 0.4rem;
+  font-style: italic;
+}
+
+.names {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0 0 2rem;
+  font-size: 1.2rem;
+
+  &_inputs {
+    display: flex;
+    justify-content: center;
+
+    .input {
+      margin-right: 0.5rem;
+    }
+  }
+
+  &_box {
+    display: flex;
+    align-items: center;
+
+    .name {
+      margin-left: 1rem;
+      color: $secondary-color;
+    }
+  }
+}
+
+.todos {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .input {
+    min-width: 20rem;
+    margin-right: 0.7rem;
+  }
+
+  &_creator {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .todo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    min-width: 22rem;
+    margin: 0 0 1.3rem;
+  }
+}
+
+.button {
+  /* padding: 0.5rem;
+  text-transform: uppercase;
+  border-radius: 10px;
+  border: 2px solid #979797;
+  font-weight: 600; */
+  padding: 0.4rem;
+  font-weight: 600;
+  border-radius: 10px;
+  border: 2px solid $secondary-color;
+  background-color: $main-color;
+
+  &_icon {
+    font-size: 2.2rem;
+    color: $secondary-color;
+    transition: ease 0.3s;
+
+    &_todo {
+      font-size: 1.3rem;
+      margin-right: 0.5rem;
+    }
+
+    &:active {
+      transform: scale(0.8);
+    }
+  }
+
+  &_navigate {
+    font-size: 1rem;
+    margin: 0.3rem;
+    padding: 0.6rem;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 20px;
+    font-weight: 600;
+    background-color: #bebebe;
+    transition: ease 0.3s;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: radial-gradient(#dfdfdf 50%, $secondary-color);
+      transform: scale(0.9);
+    }
+  }
 }

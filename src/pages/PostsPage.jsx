@@ -9,8 +9,12 @@ const Posts = () => {
 
   return (
     <div>
-      <h1>Redux Toolkit Async Thunk</h1>
-      <button onClick={() => dispatch(getPosts())} type="submit" className="">
+      <h1 className="header">Redux Toolkit Async Thunk</h1>
+      <button
+        onClick={() => dispatch(getPosts())}
+        type="submit"
+        className="button"
+      >
         Get posts
       </button>
       {posts?.map((post) => (

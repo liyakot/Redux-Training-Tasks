@@ -1,20 +1,31 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [active, setActive] = useState(false);
+  const buttonsNavigate = [
+    {
+      title: "State Change",
+      link: "/",
+      active: false,
+    },
+    { title: "Todo App", link: "/todos", active: false },
+    { title: "Async Thunk", link: "/posts", active: false },
+  ];
+
   return (
     <div>
-      <Link to={"/"}>
-        <button className="button_navigate">State Change</button>
-      </Link>
-
-      <Link to={"/todos"}>
-        <button className="button_navigate">Todo App</button>
-      </Link>
-
-      <Link to={"/posts"}>
-        <button className="button_navigate">Async Thunk</button>
-      </Link>
+      {buttonsNavigate.map((item, key) => (
+        <Link to={item.link} key={key}>
+          <button
+            onClick={() => item.active === true}
+            className="button button_navigate"
+          >
+            {item.title}
+          </button>
+        </Link>
+      ))}
     </div>
   );
 };
