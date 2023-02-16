@@ -8,18 +8,22 @@ const Posts = () => {
   const posts = useSelector((state) => state.posts.posts);
 
   return (
-    <div>
+    <div className="container">
       <h1 className="header">Redux Toolkit Async Thunk</h1>
-      <button
-        onClick={() => dispatch(getPosts())}
-        type="submit"
-        className="button"
-      >
-        Get posts
-      </button>
-      {posts?.map((post) => (
-        <PostItem key={post.id} post={post} />
-      ))}
+      <div className="posts">
+        <p
+          onClick={() => dispatch(getPosts())}
+          type="submit"
+          className="posts_button"
+        >
+          Get posts
+        </p>
+        <div>
+          {posts?.map((post) => (
+            <PostItem key={post.id} post={post} />
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

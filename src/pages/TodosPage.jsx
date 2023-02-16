@@ -21,7 +21,7 @@ const Todos = () => {
   };
 
   return (
-    <div>
+    <div className="container">
       <h1 className="header">Redux Toolkit Todo App</h1>
       <form className="todos" onSubmit={(e) => e.preventDefault()}>
         <div className="todos_creator">

@@ -13,14 +13,14 @@ const TodoItem = ({ todo }) => {
     dispatch(removeTodo(id));
   };
   return (
-    <div className="todo">
+    <div className="item">
       <div
-        className="todo_text"
         style={{ color: todo.completed ? "rgb(48, 255, 151)" : "white" }}
+        className="text"
       >
         {todo.text}
       </div>
-      <div className="todo_icons">
+      <div>
         <FaCheckDouble
           onClick={() => toggleTodoHandler(todo.id)}
           className="button_icon button_icon_todo"

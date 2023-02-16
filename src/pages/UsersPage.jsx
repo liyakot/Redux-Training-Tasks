@@ -8,7 +8,7 @@ const Users = () => {
   const dispatch = useDispatch();
 
   return (
-    <div>
+    <div className="container">
       <h1 className="header">Redux Toolkit State Change</h1>
       <div className="names_inputs">
         <input
