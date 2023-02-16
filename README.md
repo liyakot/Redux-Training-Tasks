@@ -5,7 +5,7 @@ Redux-Training-Tasks</h1>
 </h2>
 
 <h3 align="center">
-    <a href="https://netflix-redesignnn.netlify.app/" target="_blank">Life Demo</a>
+    <a href="https://redux-trainingg.netlify.app/" target="_blank">Life Demo</a>
 </h3>
 
 ### Description
