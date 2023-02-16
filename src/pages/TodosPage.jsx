@@ -20,6 +20,10 @@ const Todos = () => {
     setTodoValue("");
   };
 
+  const errorHandler = () => {
+    alert("This field is empty...");
+  };
+
   return (
     <div className="container">
       <h1 className="header">Redux Toolkit Todo App</h1>
@@ -30,14 +34,14 @@ const Todos = () => {
             value={todoValue}
             placeholder="Write an essay..."
             className="input"
-            onChange={(e) => setTodoValue(e.target.value)}
+            onChange={(e) => {
+              setTodoValue(e.target.value);
+            }}
           />
-          {/* <button
-            type="submit"
+          <FaPlus
             className="button_icon"
-            onClick={addTodoHandler}
-          > */}
-          <FaPlus className="button_icon" onClick={addTodoHandler} />
+            onClick={todoValue ? addTodoHandler : errorHandler}
+          />
         </div>
 
         {todos?.map((todo) => (
