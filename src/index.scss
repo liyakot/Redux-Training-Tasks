@@ -53,18 +53,18 @@ button {
 
 @include tablet {
   html {
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 
 @include laptop {
   html {
-    font-size: 16px;
+    font-size: 17px;
   }
 }
 
 @include desktop {
   html {
-    font-size: 18px;
+    font-size: 19px;
   }
 }

@@ -15,7 +15,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div>
+    <div className="navigates">
       {buttonsNavigate.map((item, key) => (
         <Link to={item.link} key={key}>
           <button

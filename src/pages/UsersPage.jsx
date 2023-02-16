@@ -10,34 +10,36 @@ const Users = () => {
   return (
     <div className="container">
       <h1 className="header">Redux Toolkit State Change</h1>
-      <div className="names_inputs">
-        <input
-          type="text"
-          placeholder="First Name"
-          className="input"
-          onChange={(e) => {
-            dispatch(setFirstName(e.target.value));
-          }}
-        />
-        <input
-          type="text"
-          placeholder="Last Name"
-          className="input"
-          onChange={(e) => {
-            dispatch(setLastName(e.target.value));
-          }}
-        />
-      </div>
-
       <div className="names">
-        <div className="names_box">
-          <p>First Name:</p>
-          <FirstName />
+        <div className="inputs">
+          <input
+            type="text"
+            placeholder="First Name"
+            className="input"
+            onChange={(e) => {
+              dispatch(setFirstName(e.target.value));
+            }}
+          />
+          <input
+            type="text"
+            placeholder="Last Name"
+            className="input"
+            onChange={(e) => {
+              dispatch(setLastName(e.target.value));
+            }}
+          />
         </div>
 
-        <div className="names_box">
-          <p>Last Name:</p>
-          <LastName />
+        <div className="text">
+          <div className="box">
+            <p>First Name:</p>
+            <FirstName />
+          </div>
+
+          <div className="box">
+            <p>Last Name:</p>
+            <LastName />
+          </div>
         </div>
       </div>
     </div>
