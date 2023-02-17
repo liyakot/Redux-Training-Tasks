@@ -28,6 +28,7 @@ body {
       font-style: italic;
     }
 
+    /*UsersPage*/
     .names {
       display: flex;
       flex-direction: column;
@@ -36,10 +37,10 @@ body {
       .inputs {
         display: flex;
         justify-content: center;
-        max-width: 80%;
 
         .input {
           margin-right: 0.5rem;
+          width: 11rem;
         }
       }
 
@@ -62,6 +63,7 @@ body {
       }
     }
 
+    /*TodosPage*/
     .todos {
       display: flex;
       align-items: center;
@@ -84,17 +86,18 @@ body {
         justify-content: space-between;
         flex-wrap: wrap;
         font-size: 1.2rem;
-        width: 23rem;
+        width: 22rem;
         margin: 0 0 1.3rem;
         line-height: 1.5rem;
 
         .text {
-          width: 19rem;
+          width: 18rem;
           word-wrap: break-word;
         }
       }
     }
 
+    /*PostsPage*/
     .posts {
       &_button {
         text-align: center;
@@ -153,6 +156,7 @@ body {
         }
       }
 
+      /*Navbar*/
       &_navigate {
         font-size: 1rem;
         margin: 0.3rem;
